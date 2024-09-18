@@ -4,6 +4,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 
 type SearchResult = {
     english: string;
@@ -48,6 +49,9 @@ const SearchResults: React.FC = () => {
 
     return (
         <div className="p-4">
+            <Link href="/" style={{ textDecoration: 'none', color:'red' }}>
+      Home
+    </Link>
             <h1 className="mb-4">Search Results</h1>
 
             {/* Search Form */}
