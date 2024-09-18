@@ -82,9 +82,7 @@ const EnglishGrammarPage: React.FC = () => {
             bmBurgerBars: {
               background: 'lime',
             },
-            bmBurgerBarsHover: {
-              background: '#a90000',
-            },
+            
             bmMenuWrap: {
               position: 'fixed',
               top: '0',

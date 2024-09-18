@@ -83,7 +83,6 @@ const PresentContinuousPage: React.FC = () => {
             zIndex: '100',
           },
           bmBurgerBars: { background: 'lime' },
-          bmBurgerBarsHover: { background: '#a90000' },
           bmMenuWrap: { width: '200px' },
           bmMenu: { background: 'white', padding: '2.5em 1.5em 0' },
           bmOverlay: { background: 'rgba(0, 0, 0, 0.3)' },

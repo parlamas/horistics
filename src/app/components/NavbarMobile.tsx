@@ -13,7 +13,7 @@ const NavbarMobile: React.FC = () => {
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
   const [formOpen, setFormOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [searchResults, setSearchResults] = useState<string[]>([]); // Placeholder for search results
+  //const [searchResults, setSearchResults] = useState<string[]>([]); // Placeholder for search results
 
 
 
