@@ -1,0 +1,63 @@
+/* src/app/philosophy/republic/republic.css */
+.centered-container {
+    display: flex;
+    justify-content: center; /* Center the entire container horizontally */
+    width: 100%;
+    background-color: brown;
+  }
+  
+  .republic {
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for consistent character width */
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%; /* Occupy 50% of the page width */
+    max-width: 800px; /* Optionally limit the maximum width */
+    color: cyan;
+    font-weight: bold;
+  }
+  
+  .centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensures the text takes up the full width of the container */
+    text-align: center; /* Center-aligns the text within the flex container */
+    margin: 0; /* Removes any default margins */
+    color: beige;
+    font-weight:bold;
+  }
+  
+  .formatted-text {
+    margin-bottom: 20px;
+  }
+  
+  .dialogue-grid {
+    background-color:black;
+    color:white;
+    display: grid;
+    grid-template-columns: auto auto; /* Auto-width columns based on content */
+    justify-content: center; /* Center the grid horizontally */
+    column-gap: 2em; /* Adjust the gap between columns */
+    margin: 20px 0;
+  }
+  
+  .left-column {
+    grid-column: 1; /* Position in the first column */
+    text-align: left;
+  }
+  
+  .right-column {
+    grid-column: 2; /* Position in the second column */
+    text-align: left;
+  }
+  
+  .republic p {
+    font-family: inherit; /* Inherit font-family from the parent container */
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 5px 0;
+    text-align:justify;
+  }
+  
+  

@@ -1,0 +1,26 @@
+/* src/app/globals-mobile.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Desktop-specific styles */
+@media (min-width: 1024px) {
+  .desktop-layout {
+    display: block;
+  }
+  .mobile-layout {
+    display: none;
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 1023px) {
+  .desktop-layout {
+    display: none;
+  }
+  .mobile-layout {
+    display: block;
+  }
+}
