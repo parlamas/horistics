@@ -1,3 +1,4 @@
+// src/app/client/page.tsx
 "use client";
 import { useUser } from "@clerk/nextjs";
 import React from "react";

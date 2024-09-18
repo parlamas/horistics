@@ -17,14 +17,14 @@ const BubbleTexts: React.FC<BubbleTextsProps> = ({ language, isRTL }) => {
       <div className="bubble bubble1">
         {language === 'en' && 'What are you doing?'}
         {language === 'gr' && 'Τι κάνεις;'}
-        {/* ...other language options... */}
+        {/* Add other language options as needed */}
       </div>
 
       {/* Bubble 2 */}
       <div className="bubble bubble2">
         {language === 'en' && (<>I am having coffee and<br />( I am ) reading the paper.</>)}
         {language === 'gr' && 'Πίνω καφέ και διαβάζω εφημερίδα.'}
-        {/* ...other language options... */}
+        {/* Add other language options as needed */}
       </div>
 
       <style jsx>{`
@@ -77,13 +77,13 @@ const BubbleTexts: React.FC<BubbleTextsProps> = ({ language, isRTL }) => {
         .rtl .bubble1 {
           left: unset;
           right: 1100px;
-          text-align:center;
+          text-align: center;
         }
 
         .rtl .bubble2 {
           left: unset;
           right: 850px;
-          text-align:center;
+          text-align: center;
           transform: translateX(50%);
         }
 
@@ -99,56 +99,55 @@ const BubbleTexts: React.FC<BubbleTextsProps> = ({ language, isRTL }) => {
             left: 450px;
           }
 
-        .rtl .bubble1 {
-          left: unset;
-          top:130px;
-          right: 480px;
-          text-align:center;
-        }
+          .rtl .bubble1 {
+            left: unset;
+            top: 130px;
+            right: 480px;
+            text-align: center;
+          }
 
-        .rtl .bubble2 {
-          left: unset;
-          top:175px;
-          right: 220px;
-          text-align:center;
-          transform: translateX(50%);
-        }
+          .rtl .bubble2 {
+            left: unset;
+            top: 175px;
+            right: 220px;
+            text-align: center;
+          }
         }
 
         @media (max-width: 480px) {
           .bubble1 {
             top: 90px;
             left: 30px;
-            width:120px;
+            width: 120px;
             font-size: 10px;
             padding: 5px;
-            text-align:left;
+            text-align: left;
           }
 
           .bubble2 {
             top: 100px;
             left: 260px;
-            width:160px;
+            width: 160px;
             transform: translateX(-50%);
             font-size: 10px;
             padding: 5px;
-            text-align:left;
+            text-align: left;
           }
 
-        .rtl .bubble1 {
-          left: unset;
-          top:80px;
-          right: 250px;
-          text-align:center;
-        }
+          .rtl .bubble1 {
+            left: unset;
+            top: 80px;
+            right: 250px;
+            text-align: center;
+          }
 
-        .rtl .bubble2 {
-          left: unset;
-          top:100px;
-          right: 120px;
-          text-align:center;
-          transform: translateX(50%);
-        }
+          .rtl .bubble2 {
+            left: unset;
+            top: 100px;
+            right: 120px;
+            text-align: center;
+            transform: translateX(50%);
+          }
         }
       `}</style>
     </div>
@@ -156,4 +155,3 @@ const BubbleTexts: React.FC<BubbleTextsProps> = ({ language, isRTL }) => {
 };
 
 export default BubbleTexts;
-
