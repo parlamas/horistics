@@ -16,17 +16,22 @@ export async function GET(req: NextRequest) {
     }
 
     try {
-        const db = await connectToDatabase();
+        // Choose the appropriate URI based on environment
+        const uri = process.env.NODE_ENV === 'development' 
+            ? process.env.MONGODB_URI_LOCAL 
+            : process.env.MONGODB_URI_REMOTE;
+
+        if (!uri) {
+            throw new Error("No MongoDB URI specified");
+        }
+
+        const db = await connectToDatabase(uri);
 
         // Debug log to check if the connection to the database is successful
         console.log("Connected to the database");
 
         const results = await db.collection('translations').find({
-            $or: [
-                { 'english.simplePast': { $regex: new RegExp(query, 'i') } }, // Search in simplePast
-                { 'english.infinitive': { $regex: new RegExp(query, 'i') } }, // Search in infinitive
-                { greek: { $regex: new RegExp(query, 'i') } }                // Search in Greek
-            ]
+            english: { $regex: new RegExp(query, 'i') }  // 'i' flag for case-insensitive search
         }).toArray();
 
         // Debug log to see the results from the database
