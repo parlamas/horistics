@@ -25,7 +25,7 @@ export async function GET(req: NextRequest) {
             throw new Error("No MongoDB URI specified");
         }
 
-        const db = await connectToDatabase(uri);
+        const db = await connectToDatabase();
 
         // Debug log to check if the connection to the database is successful
         console.log("Connected to the database");
