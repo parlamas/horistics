@@ -22,7 +22,11 @@ export async function GET(req: NextRequest) {
         console.log("Connected to the database");
 
         const results = await db.collection('translations').find({
-            english: { $regex: new RegExp(query, 'i') }  // 'i' flag for case-insensitive search
+            $or: [
+                { 'english.simplePast': { $regex: new RegExp(query, 'i') } }, // Search in simplePast
+                { 'english.infinitive': { $regex: new RegExp(query, 'i') } }, // Search in infinitive
+                { greek: { $regex: new RegExp(query, 'i') } }                // Search in Greek
+            ]
         }).toArray();
 
         // Debug log to see the results from the database

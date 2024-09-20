@@ -3,14 +3,16 @@ import React from 'react';
 
 export const Classical1 = () => (
   <>
-    <span style={{ color: 'brown' }}>[327a]</span> 
-    <span style={{ color: 'black' }}>Σωκράτης:</span>&nbsp;
+    <span style={{ color: 'brown' }}>[327a]</span>&nbsp; 
+    <span style={{ color: 'black' }}>Σωκράτης:</span>&nbsp; 
     <span style={{ color: 'blue' }}>
       κατέβην χθὲς εἰς Πειραιᾶ μετὰ Γλαύκωνος τοῦ Ἀρίστωνος προσευξόμενος τε τῇ θεῷ καὶ ἅμα τὴν ἑορτὴν βουλόμενος θεάσασθαι τίνα τρόπον ποιήσουσιν ἅτε νῦν 
-      πρῶτον ἄγοντες. καλὴ μὲν οὖν μοι καὶ ἡ τῶν ἐπιχωρίων πομπὴ ἔδοξεν εἶναι, οὐ μέντοι ἧττον ἐφαίνετο πρέπειν ἣν οἱ Θρᾷκες ἔπεμπον. 
+      πρῶτον ἄγοντες. καλὴ μὲν οὖν μοι καὶ ἡ τῶν ἐπιχωρίων πομπὴ ἔδοξεν εἶναι, οὐ μέντοι ἧττον ἐφαίνετο πρέπειν ἣν οἱ Θρᾷκες ἔπεμπον. &nbsp; 
       <span style={{ color: 'brown' }}>[327b]</span>&nbsp;
       προσευξάμενοι δὲ καὶ θεωρήσαντες ἀπῇμεν πρὸς τὸ ἄστυ. κατιδὼν οὖν πόρρωθεν ἡμᾶς οἴκαδε ὡρμημένους Πολέμαρχος ὁ Κεφάλου ἐκέλευσε δραμόντα τὸν παῖδα περιμεῖναί ἑκελεῦσαι.
     </span>
+    <p style={{color:'red'}}>You can copy a word from the blue text and paste it in the search field then click on the search button to see the English translation. 
+      Make sure not to copy any spaces...just copy the word.</p>
   </>
 );
 
