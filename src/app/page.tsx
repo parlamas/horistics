@@ -17,7 +17,7 @@ export default function RepublicPage() {
   };
 
   return (
-    <div style={{marginTop:'60px'}}>
+    <div style={{marginTop:'50px'}}>
       <Navbar/>
       {/* This container centers only the upper part */}
       
