@@ -3,6 +3,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { connectToDatabase } from '../../../lib/db';
 
+// Helper function to fetch data from an external API
+async function getData() {
+    const apiUrl = process.env.API_URL || 'https://default-api-url.com';
+  
+    const response = await fetch(`${apiUrl}`);
+    const data = await response.json();
+    return data;
+}
+
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const query = searchParams.get('query');
@@ -25,7 +34,7 @@ export async function GET(req: NextRequest) {
             throw new Error("No MongoDB URI specified");
         }
 
-        const db = await connectToDatabase();
+        const db = await connectToDatabase();  // No need to pass the URI, it's handled internally
 
         // Debug log to check if the connection to the database is successful
         console.log("Connected to the database");
@@ -42,7 +51,17 @@ export async function GET(req: NextRequest) {
             return NextResponse.json({ message: `No results found for "${query}". Please try another word.` });
         }
 
-        return NextResponse.json(results);
+        // Fetch additional data from the external API
+        const apiData = await getData();
+        console.log("External API data:", apiData);
+
+        // You can choose to combine the API data and database results
+        const combinedResults = {
+            databaseResults: results,
+            externalApiData: apiData
+        };
+
+        return NextResponse.json(combinedResults);
     } catch (error) {
         // Debug log for catching any errors
         console.error("Error occurred:", error);
