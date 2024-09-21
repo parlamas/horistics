@@ -1,14 +1,14 @@
-// src/app/philosophy/republic/page.tsx
-
-"use client"; // Ensure this is at the top of the file
+// src/app/ohilisophy/reåublic/page.tsx
+"use client";
 
 import React, { useState } from 'react';
 //import Image from 'next/image';
 import LTComponent from '../../components/R-01'; // Import LTComponent
 import '../../globals.css';
 import './republic.css'; // Make sure this CSS file contains your styles
-import NavbarDesktop from '../../components/NavbarDesktop';
+//import NavbarDesktop from '../../components/NavbarDesktop';
 //import NavbarMobile from '../../components/NavbarMobile';
+import Navbar from '../../components/Navbar';  // Use the unified Navbar component
 
 export default function RepublicPage() {
   const [currentLanguage, setCurrentLanguage] = useState('en');
@@ -21,8 +21,7 @@ export default function RepublicPage() {
 
   return (
     <div style={{marginTop:'50px'}}>
-        <NavbarDesktop />
-        
+      <Navbar/>
       {/* This container centers only the upper part */}
       
       <div 
@@ -55,6 +54,7 @@ export default function RepublicPage() {
             )}
             {currentLanguage === 'es' && (
               <>
+              <p className="centered-text" style={{color:"cyan",fontSize:"9pt"}}>Isidoros Parlamas</p>
                 <p className="centered-text">LA REPÚBLICA DE PLATÓN</p>
                 <p className="centered-text">LIBRO I</p>
                 <p className="centered-text">PERSONAJES DEL DIÁLOGO</p>
@@ -72,6 +72,7 @@ export default function RepublicPage() {
             )}
             {currentLanguage === 'da' && (
               <>
+              <p className="centered-text" style={{color:"cyan",fontSize:"9pt"}}>Isidoros Parlamas</p>
                 <p className="centered-text">REPUBLIKKEN PLATO</p>
                 <p className="centered-text">BOG I</p>
                 <p className="centered-text">PERSONER I DIALOGEN</p>
@@ -89,6 +90,7 @@ export default function RepublicPage() {
             )}
             {currentLanguage === 'pl' && (
               <>
+              <p className="centered-text" style={{color:"cyan",fontSize:"9pt"}}>Isidoros Parlamas</p>
                 <p className="centered-text">REPUBLIKA PLATONA</p>
                 <p className="centered-text">KSIĘGA I</p>
                 <p className="centered-text">OSOBY DIALOGU</p>
@@ -106,6 +108,7 @@ export default function RepublicPage() {
             )}
             {currentLanguage === 'pt' && (
               <>
+              <p className="centered-text" style={{color:"cyan",fontSize:"9pt"}}>Isidoros Parlamas</p>
                 <p className="centered-text">A REPÚBLICA DE PLATÃO</p>
                 <p className="centered-text">LIVRO I</p>
                 <p className="centered-text">PESSOAS DO DIÁLOGO</p>
@@ -123,6 +126,7 @@ export default function RepublicPage() {
             )}
             {currentLanguage === 'fr' && (
               <>
+              <p className="centered-text" style={{color:"cyan",fontSize:"9pt"}}>Isidoros Parlamas</p>
                 <p className="centered-text">LA RÉPUBLIQUE DE PLATON</p>
                 <p className="centered-text">LIVRE I</p>
                 <p className="centered-text">LES PERSONNES DU DIALOGUE</p>
@@ -140,6 +144,7 @@ export default function RepublicPage() {
             )}
             {currentLanguage === 'zh' && (
               <>
+              <p className="centered-text" style={{color:"cyan",fontSize:"9pt"}}>Isidoros Parlamas</p>
                 <p className="centered-text" style={{ fontSize:"8pt"}}>柏拉图的《理想国》 Bólātú de “lǐxiǎng guó”</p>
                 <p className="centered-text"style={{ fontSize:"8pt"}} >第一卷 dì yī juàn</p>
                 <p className="centered-text" style={{ fontSize:"8pt"}}>对话者 duìhuà zhě</p>
@@ -159,6 +164,7 @@ export default function RepublicPage() {
             )}
             {currentLanguage === 'gr' && (
               <>
+              <p className="centered-text" style={{color:"cyan",fontSize:"9pt"}}>Ισίδωρος Παρλαμάς</p>
                 <p className="centered-text">Η ΠΟΛΙΤΕΙΑ ΤΟΥ ΠΛΑΤΩΝΑ</p>
                 <p className="centered-text">ΒΙΒΛΙΟ I</p>
                 <p className="centered-text">ΠΡΟΣΩΠΑ ΤΟΥ ΔΙΑΛΟΓΟΥ</p>
@@ -167,7 +173,7 @@ export default function RepublicPage() {
                   <div className="right-column">ΚΕΦΑΛΟΣ</div>
                   <div className="left-column">ΓΛΑΥΚΩΝ</div>
                   <div className="right-column">ΘΡΑΣΥΜΑΧΟΣ</div>
-                  <div className="left-column">ΑΔΕΙΜΑΝΤΟΣ</div>
+                  <div className="left-column">ΑΔΕΙΜΑΝΤΟΣ*</div>
                   <div className="right-column">ΚΛΕΙΤΟΦΩΝ</div>
                   <div className="left-column">ΠΟΛΕΜΑΡΧΟΣ</div>
                 </div>
@@ -185,3 +191,4 @@ export default function RepublicPage() {
     </div>
   );
 }
+
