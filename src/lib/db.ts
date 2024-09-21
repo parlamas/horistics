@@ -1,13 +1,16 @@
 // src/lib/db.ts
+
 import { MongoClient, Db } from 'mongodb';
 
-const uri = process.env.MONGODB_URI_LOCAL;
+const uri = process.env.NODE_ENV === 'development'
+  ? process.env.MONGODB_URI_LOCAL
+  : process.env.MONGODB_URI_REMOTE;
 
 let cachedDb: Db | null = null;
 
 export async function connectToDatabase(): Promise<Db> {
   if (!uri) {
-    throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+    throw new Error('MongoDB URI is required');
   }
 
   if (cachedDb) {
@@ -15,10 +18,11 @@ export async function connectToDatabase(): Promise<Db> {
   }
 
   try {
-    const client = await MongoClient.connect(uri, {});  // Removed deprecated options
+    const client = await MongoClient.connect(uri, {});
     cachedDb = client.db();
     return cachedDb;
-  } catch {
-    throw new Error('Failed to connect to the database'); // Removed unused error variable
+  } catch (error) {
+    console.error('Database connection error:', error);
+    throw new Error('Failed to connect to the database');
   }
 }
