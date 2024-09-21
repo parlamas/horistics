@@ -17,7 +17,7 @@ export default function RepublicPage() {
   };
 
   return (
-    <div>
+    <div style={{marginTop:'60px'}}>
       <Navbar/>
       {/* This container centers only the upper part */}
       
@@ -39,7 +39,7 @@ export default function RepublicPage() {
                 <p className="centered-text">PERSONS OF THE DIALOGUE</p>
                 <div className="dialogue-grid">
                   <div className="left-column"><span className="highlighted-text" style={{ color:"gold"}}>SOCRATES</span>, who is the narrator.</div>
-                  <div className="right-column">CÉFALO</div>
+                  <div className="right-column">CEPHALUS</div>
                   <div className="left-column">GLAUCON</div>
                   <div className="right-column">THRASYMACHUS</div>
                   <div className="left-column">ADEIMANTUS</div>

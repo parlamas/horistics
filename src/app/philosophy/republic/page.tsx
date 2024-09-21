@@ -20,7 +20,7 @@ export default function RepublicPage() {
   };
 
   return (
-    <div>
+    <div style={{marginTop:'50px'}}>
         <NavbarDesktop />
         
       {/* This container centers only the upper part */}
@@ -37,6 +37,7 @@ export default function RepublicPage() {
           <div className="formatted-text" style={{ height: '100%' }}>
             {currentLanguage === 'en' && (
               <>
+              <p className="centered-text" style={{color:"cyan",fontSize:"9pt"}}>Isidoros Parlamas</p>
                 <p className="centered-text">PLATO&apos;S REPUBLIC</p>
                 <p className="centered-text">BOOK I</p>
                 <p className="centered-text">PERSONS OF THE DIALOGUE</p>
