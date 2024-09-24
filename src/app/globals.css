@@ -2,3 +2,74 @@
 
 @import './globals-mobile.css' screen and (max-width: 768px);
 @import './globals-desktop.css' screen and (min-width: 769px);
+
+
+.parallelogram {
+  position: fixed;
+  bottom: 20px;
+  right: 80px;
+  width: 550px;
+  height: 200px;
+  background-color:red; /* Dark background for contrast */
+  color: white;
+  transform: skew(-20deg);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: 1.5rem;
+  padding-left: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.parallelogram p {
+  transform: skew(20deg); /* Reset the skew for the text */
+  margin: 0;
+  text-align: left;
+}
+
+/* The word will have a fixed height to prevent it from moving */
+.word {
+  font-size: 25pt;
+  color: blue; /* Blue for the word */
+  font-weight: bold;
+  height: 40px; /* Fixed height to keep it in place */
+  display: flex;
+  align-items: center; /* Center the text vertically within the fixed height */
+}
+
+/* The definition will adjust depending on its size */
+.definition {
+  font-size: 13pt;
+  font-weight:bold;
+  color: white; /* White for the definition */
+  margin-top: 10px; /* Space between the word and definition */
+  height: 100%; /* Make the definition take the remaining space */
+  overflow-y: auto; /* Ensure large definitions don’t overflow the box */
+}
+
+/* Custom styles for specific parts of the definition */
+.highlight {
+  color: yellow; /* Highlight important parts in yellow */
+  font-weight: bold;
+}
+
+.important {
+  color: red; /* Style "important way" in red */
+  font-style: normal;
+}
+
+.trans {
+  color: blue; /* Blue color for the text */
+  font-style: normal; /* Ensure text is not italic */
+}
+
+.y {
+  color: yellow; /* Blue color for the text */
+  font-style: normal; /* Ensure text is not italic */
+}
+
+
+

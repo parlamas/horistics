@@ -1,5 +1,5 @@
 //src/middleware.ts
-// src/middleware.ts
+
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
 // Define a matcher for the home page, which will remain publicly accessible
