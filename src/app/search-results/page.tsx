@@ -80,7 +80,11 @@ const SearchResults: React.FC = () => {
                 <ul>
                     {results.map((result, index) => (
                         <li key={index}>
-                            {result.english} - <span style={{ color: 'blue' }}>{result.greek}</span>
+                            {/* Render HTML from the 'english' field safely */}
+                            <div dangerouslySetInnerHTML={{ __html: result.english }} />
+
+                            {/* Display Greek translation */}
+                            <span style={{ color: 'blue' }}>{result.greek}</span>
                         </li>
                     ))}
                 </ul>
@@ -90,3 +94,4 @@ const SearchResults: React.FC = () => {
 };
 
 export default SearchResults;
+
