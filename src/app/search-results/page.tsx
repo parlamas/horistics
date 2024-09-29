@@ -23,7 +23,10 @@ const SearchResults: React.FC = () => {
     // Fetch the results when the component loads or query changes
     useEffect(() => {
         if (query) {
-            fetch(`/api/search?query=${encodeURIComponent(query)}`)
+            // Normalize the query to prevent encoding issues with diacritics
+            const normalizedQuery = query.normalize('NFC');
+            
+            fetch(`/api/search?query=${encodeURIComponent(normalizedQuery)}`)
                 .then((res) => res.json())
                 .then((data) => {
                     if (Array.isArray(data)) {
@@ -44,7 +47,9 @@ const SearchResults: React.FC = () => {
 
     const handleSearch = (e: React.FormEvent) => {
         e.preventDefault();
-        router.push(`/search-results?query=${encodeURIComponent(query)}`);
+        // Normalize the query before pushing to the router
+        const normalizedQuery = query.normalize('NFC');
+        router.push(`/search-results?query=${encodeURIComponent(normalizedQuery)}`);
     };
 
     return (
@@ -58,7 +63,7 @@ const SearchResults: React.FC = () => {
             <form onSubmit={handleSearch} className="mb-4">
                 <input
                     type="text"
-                    placeholder="Classical Greek to English"
+                    placeholder="Search English to Classical Greek"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     className="w-full px-2 py-1 rounded border"
@@ -75,9 +80,7 @@ const SearchResults: React.FC = () => {
                 <ul>
                     {results.map((result, index) => (
                         <li key={index}>
-                            {/* Render the `english` field as HTML using dangerouslySetInnerHTML */}
-                            <p dangerouslySetInnerHTML={{ __html: result.english }} />
-                            - <span style={{ color: 'blue' }}>{result.greek}</span>
+                            {result.english} - <span style={{ color: 'blue' }}>{result.greek}</span>
                         </li>
                     ))}
                 </ul>
@@ -87,4 +90,3 @@ const SearchResults: React.FC = () => {
 };
 
 export default SearchResults;
-
