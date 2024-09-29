@@ -49,9 +49,9 @@ const SearchResults: React.FC = () => {
 
     return (
         <div className="p-4">
-            <Link href="/" style={{ textDecoration: 'none', color:'red' }}>
-      Home
-    </Link>
+            <Link href="/" style={{ textDecoration: 'none', color: 'red' }}>
+                Home
+            </Link>
             <h1 className="mb-4">Search Results</h1>
 
             {/* Search Form */}
@@ -75,7 +75,9 @@ const SearchResults: React.FC = () => {
                 <ul>
                     {results.map((result, index) => (
                         <li key={index}>
-                            {result.english} - <span style={{ color: 'blue' }}>{result.greek}</span>
+                            {/* Render the `english` field as HTML using dangerouslySetInnerHTML */}
+                            <p dangerouslySetInnerHTML={{ __html: result.english }} />
+                            - <span style={{ color: 'blue' }}>{result.greek}</span>
                         </li>
                     ))}
                 </ul>
@@ -85,3 +87,4 @@ const SearchResults: React.FC = () => {
 };
 
 export default SearchResults;
+
