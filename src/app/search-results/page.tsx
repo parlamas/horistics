@@ -58,7 +58,7 @@ const SearchResults: React.FC = () => {
             <form onSubmit={handleSearch} className="mb-4">
                 <input
                     type="text"
-                    placeholder="Search English to Classical Greek"
+                    placeholder="Classical Greek to English"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     className="w-full px-2 py-1 rounded border"

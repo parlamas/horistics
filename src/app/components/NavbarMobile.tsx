@@ -192,7 +192,7 @@ const NavbarMobile: React.FC = () => {
           <form onSubmit={handleSearch} className="flex items-center">
             <input
               type="text"
-              placeholder="English to Classical Greek"
+              placeholder="Classical Greek to English"
               className="w-full px-2 py-1 rounded text-black xs"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
