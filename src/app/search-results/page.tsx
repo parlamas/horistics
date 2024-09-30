@@ -84,7 +84,7 @@ const SearchResults: React.FC = () => {
                             <div dangerouslySetInnerHTML={{ __html: result.english }} />
 
                             {/* Display Greek translation */}
-                            <span style={{ color: 'blue' }}>{result.greek}</span>
+                            {/*<span style={{ color: 'blue' }}>{result.greek}</span>*/}
                         </li>
                     ))}
                 </ul>
