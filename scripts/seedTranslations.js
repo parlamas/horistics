@@ -1,56 +1,53 @@
 //scripts/seedTranslations.js
-// Load environment variables from .env.local or .env file
-// Manually specify the path to the .env.local file
-require('dotenv').config({ path: './.env.local' });
+// src/app/api/search/route.ts
 
-const { MongoClient } = require('mongodb');
-const diacritics = require('diacritics');
+import { NextRequest, NextResponse } from 'next/server';
+import { connectToDatabase } from '../../../lib/db';
+const diacritics = require('diacritics');  // Import the diacritics library
 
-// MongoDB connection string from environment variables
-const uri = process.env.MONGODB_URI_LOCAL;
+export async function GET(req: NextRequest) {
+    const { searchParams } = new URL(req.url);
+    const query = searchParams.get('query');
 
-// Debug log to confirm if the URI is loaded correctly from the environment
-console.log("MongoDB URI from .env.local:", uri);
+    console.log("Received query:", query);
 
-if (!uri) {
-    console.error("MongoDB URI is not loaded. Check your .env.local file.");
-    process.exit(1);  // Stop the script if the URI is not found
-}
-
-async function seedTranslations() {
-    // Initialize MongoClient with the connection string
-    const client = new MongoClient(uri);
+    if (!query) {
+        return NextResponse.json({ error: 'Query parameter is required' }, { status: 400 });
+    }
 
     try {
-        // Connect to MongoDB
-        await client.connect();
-        const db = client.db('hellas');  // Replace with your actual DB name
-        const translations = db.collection('translations');
+        const uri = process.env.NODE_ENV === 'development' 
+            ? process.env.MONGODB_URI_LOCAL 
+            : process.env.MONGODB_URI_REMOTE;
 
-        // Example Greek word
-        const greekWord = "χθὲς";
+        if (!uri) {
+            throw new Error("No MongoDB URI specified");
+        }
 
-        // Normalize the Greek word to ensure consistency (NFC normalization form)
-        const normalizedGreekWord = greekWord.normalize('NFC');
+        const db = await connectToDatabase(uri);
 
-        // Remove diacritics from the normalized word
-        const strippedGreekWord = diacritics.remove(normalizedGreekWord);
+        console.log("Connected to the database");
 
-        // Insert the translation into MongoDB
-        await translations.insertOne({
-            greek: normalizedGreekWord,          // Original word with diacritics
-            greek_stripped: strippedGreekWord,   // Word without diacritics
-            english: "yesterday"                 // English translation
-        });
+        // Normalize and strip the search query of diacritics
+        const normalizedQuery = query.normalize('NFC');  // Normalize to NFC form
+        const strippedQuery = diacritics.remove(normalizedQuery);  // Remove diacritics
 
-        console.log("Translation inserted successfully!");
+        const results = await db.collection('translations').find({
+            $or: [
+                { greek: { $regex: new RegExp(normalizedQuery, 'i') } },  // Match normalized word
+                { greek_stripped: { $regex: new RegExp(strippedQuery, 'i') } }  // Match diacritic-free word
+            ]
+        }).toArray();
+
+        console.log("Search results:", results);
+
+        if (results.length === 0) {
+            return NextResponse.json({ message: `No results found for "${query}". Please try another word.` });
+        }
+
+        return NextResponse.json(results);
     } catch (error) {
-        console.error("Error inserting translation:", error);
-    } finally {
-        // Close the MongoDB connection
-        await client.close();
+        console.error("Error occurred:", error);
+        return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
     }
 }
-
-// Execute the seeding function
-seedTranslations();
