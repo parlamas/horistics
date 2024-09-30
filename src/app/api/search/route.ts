@@ -30,8 +30,9 @@ export async function GET(req: NextRequest) {
         // Debug log to check if the connection to the database is successful
         console.log("Connected to the database");
 
+        // Modify the search to target the "greek" field, not "english"
         const results = await db.collection('translations').find({
-            english: { $regex: new RegExp(query, 'i') }  // 'i' flag for case-insensitive search
+            greek: { $regex: new RegExp(query, 'i') }  // 'i' flag for case-insensitive search in the greek field
         }).toArray();
 
         // Debug log to see the results from the database
@@ -49,4 +50,3 @@ export async function GET(req: NextRequest) {
         return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
     }
 }
-
