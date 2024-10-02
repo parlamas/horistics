@@ -6,11 +6,10 @@ export const Classical1 = () => (
     <span style={{ color: 'brown' }}>[327a]</span>&nbsp; 
     <span style={{ color: 'black' }}>Σωκράτης:</span>&nbsp; 
     <span style={{ color: 'blue' }}>
-      <span style={{color: 'red', fontWeight: 'bold'}}>p1</span> κατέβην χθὲς εἰς Πειραιᾶ μετὰ Γλαύκωνος τοῦ Ἀρίστωνος 
-      <span style={{color: 'red', fontWeight: 'bold'}}>p2</span> προσευξόμενος τε τῇ 
+      <span style={{color: 'red', fontWeight: 'bold'}}>p1</span> κατέβην χθὲς εἰς Πειραιᾶ μετὰ Γλαύκωνος τοῦ Ἀρίστωνος <span style={{color: 'red', fontWeight: 'bold'}}> p2</span> προσευξόμενος τε τῇ 
       θεᾷ καὶ ἅμα τὴν ἑορτὴν βουλόμενος θεάσασθαι τίνα τρόπον ποιήσουσιν <span style={{color: 'red', fontWeight: 'bold'}}>p3</span> ἅτε νῦν 
       πρῶτον ἄγοντες. <span style={{color: 'red', fontWeight: 'bold'}}>p4</span> καλὴ μὲν οὖν μοι καὶ ἡ τῶν ἐπιχωρίων πομπὴ ἔδοξεν εἶναι, 
-      <span style={{color: 'red', fontWeight: 'bold'}}>p5 </span>οὐ μέντοι 
+      <span style={{color: 'red', fontWeight: 'bold'}}> p5 </span>οὐ μέντοι 
       ἧττον ἐφαίνετο πρέπειν ἣν οἱ Θρᾷκες ἔπεμπον. &nbsp; 
       <span style={{ color: 'brown' }}>[327b]</span>&nbsp;
       προσευξάμενοι δὲ καὶ θεωρήσαντες ἀπῇμεν πρὸς τὸ ἄστυ. <span style={{color: 'red', fontWeight: 'bold'}}>p6</span> κατιδὼν οὖν πόρρωθεν ἡμᾶς 
