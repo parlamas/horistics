@@ -6,12 +6,15 @@ export const Classical1 = () => (
     <span style={{ color: 'brown' }}>[327a]</span>&nbsp; 
     <span style={{ color: 'black' }}>Σωκράτης:</span>&nbsp; 
     <span style={{ color: 'blue' }}>
-      κατέβην χθὲς εἰς Πειραιᾶ μετὰ Γλαύκωνος τοῦ Ἀρίστωνος προσευξόμενος τε τῇ θεᾷ καὶ ἅμα τὴν ἑορτὴν βουλόμενος θεάσασθαι τίνα τρόπον ποιήσουσιν ἅτε νῦν 
-      πρῶτον ἄγοντες. καλὴ μὲν οὖν μοι καὶ ἡ τῶν ἐπιχωρίων πομπὴ ἔδοξεν εἶναι, οὐ μέντοι ἧττον ἐφαίνετο πρέπειν ἣν οἱ Θρᾷκες ἔπεμπον. &nbsp; 
+      <span style={{color: 'red', fontWeight: 'bold'}}>p1</span>κατέβην χθὲς εἰς Πειραιᾶ μετὰ Γλαύκωνος τοῦ Ἀρίστωνος 
+      <span style={{color: 'red', fontWeight: 'bold'}}>p2</span>προσευξόμενος 
+      τε τῇ θεᾷ καὶ ἅμα τὴν ἑορτὴν βουλόμενος θεάσασθαι τίνα τρόπον ποιήσουσιν <span style={{color: 'red', fontWeight: 'bold'}}>p3</span>ἅτε νῦν 
+      πρῶτον ἄγοντες. <span style={{color: 'red', fontWeight: 'bold'}}>p4</span>καλὴ μὲν οὖν μοι καὶ ἡ τῶν ἐπιχωρίων πομπὴ ἔδοξεν εἶναι, <span style={{color: 'red', fontWeight: 'bold'}}>p5</span>οὐ μέντοι ἧττον ἐφαίνετο πρέπειν ἣν οἱ Θρᾷκες ἔπεμπον. &nbsp; 
       <span style={{ color: 'brown' }}>[327b]</span>&nbsp;
-      προσευξάμενοι δὲ καὶ θεωρήσαντες ἀπῇμεν πρὸς τὸ ἄστυ. κατιδὼν οὖν πόρρωθεν ἡμᾶς οἴκαδε ὡρμημένους Πολέμαρχος ὁ Κεφάλου ἐκέλευσε δραμόντα τὸν παῖδα περιμεῖναί ἑκελεῦσαι.
+      προσευξάμενοι δὲ καὶ θεωρήσαντες ἀπῇμεν πρὸς τὸ ἄστυ. <span style={{color: 'red', fontWeight: 'bold'}}>p6</span>κατιδὼν οὖν πόρρωθεν ἡμᾶς οἴκαδε ὡρμημένους Πολέμαρχος ὁ Κεφάλου ἐκέλευσε δραμόντα τὸν παῖδα 
+      περιμεῖναί ἑκελεῦσαι.
     </span>
-    <p style={{color:'red'}}>You can copy a word from the blue text and paste it in the search field then click on the search button to see the English translation. 
+    <p style={{color:'green', fontWeight:'bold'}}>You can type one of the red numbers, <span style={{ color: 'red' }}>p1, p2</span> etc, in the search field and then click on the search button to see basic analysis. 
       Make sure not to copy any spaces...just copy the word.</p>
   </>
 );
