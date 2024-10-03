@@ -27,7 +27,7 @@ export const Classical2 = () => (
       <span style={{ color: 'brown' }}>[327b]</span>&nbsp; <span style={{color: 'red', fontWeight: 'bold'}}>a7</span> καί μου ὄπισθεν ὁ παῖς λαβόμενος τοῦ ἱματίου, κελεύει ὑμᾶς, ἔφη, 
       Πολέμαρχος περιμεῖναι. <span style={{color: 'red', fontWeight: 'bold'}}>a8</span> καὶ ἐγὼ μετεστράφην τε καὶ ἠρόμην 
       ὅπου αὐτὸς εἴη. <span style={{color: 'red', fontWeight: 'bold'}}>a9</span> οὗτος, ἔφη, ὄπισθεν προσέρχεται: ἀλλὰ περιμένετε. ἀλλὰ περιμενοῦμεν, ἦ δ᾽ ὃς ὁ Γλαύκων. 
-      <span style={{ color: 'brown' }}>[327c]</span>&nbsp;<span style={{color: 'red', fontWeight: 'bold'}}>a10</span> καὶ ὀλίγῳ ὕστερον ὅ τε Πολέμαρχος ἧκε καὶ 
+      <span style={{ color: 'brown' }}> [327c]</span>&nbsp;<span style={{color: 'red', fontWeight: 'bold'}}>a10</span> καὶ ὀλίγῳ ὕστερον ὅ τε Πολέμαρχος ἧκε καὶ 
       Ἀδείμαντος ὁ τοῦ Γλαύκωνος ἀδελφὸς καὶ Νικήρατος ὁ Νικίου καὶ ἄλλοι τινὲς ὡς ἀπὸ τῆς πομπῆς.
     </span>
   </>
