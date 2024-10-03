@@ -82,7 +82,7 @@ export default function LTComponent({ onLanguageChange }: LTComponentProps) {
                 <hr style={{ border: "none", height: "5px", backgroundColor: "gray" }} />
                 <span style={{ color: 'blue' }}>Socrates:</span>&nbsp;I went down yesterday to the Piraeus with Glaucon, the son of Ariston, to pray to the goddess but also because I wanted to 
                 see in what manner they would celebrate the festival, which took place today for the first time. I was delighted with the procession of the
-                locals, but that of the Thracians was equally, if not more, beautiful. When we had finished our prayers and
+                locals, but that of the Thracians was equally, if not more, beautiful. Once we had finished our prayers and
                 viewed the spectacle, we turned in the direction of the city. At that instant Polemarchus the son of Cephalus, happened to catch sight of us from a distance as we were starting on
                 our way home, and told his servant to run and ask us to wait for him.
               </p>
