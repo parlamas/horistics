@@ -16,7 +16,7 @@ export const Classical1 = () => (
       οἴκαδε ὡρμημένους Πολέμαρχος ὁ Κεφάλου ἐκέλευσε δραμόντα τὸν παῖδα 
       περιμεῖναί ἑκελεῦσαι.
     </span>
-    <div style={{margin:'5px', backgroundColor:'black', color:'yellow', fontWeight:'bold'}}>You can type one of the red numbers, <span style={{ color: 'lime' }}>a0, a1, a2</span> etc, in the search field and 
+    <div style={{margin:'10px', padding:'10px',backgroundColor:'black', color:'yellow', fontWeight:'bold'}}>You can type one of the red numbers, <span style={{ color: 'lime' }}>a0, a1, a2</span> etc, in the search field and 
     then click on the search button to see the basic analysis.</div>
   </>
 );
