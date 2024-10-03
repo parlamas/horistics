@@ -17,7 +17,7 @@ export const Classical1 = () => (
       περιμεῖναί ἑκελεῦσαι.
     </span>
     <div style={{margin:'10px', padding:'10px',backgroundColor:'black', color:'yellow', fontWeight:'bold'}}>You can type one of the red numbers, <span style={{ color: 'lime' }}>a0, a1, a2</span> etc, in the search field and 
-    then click on the search button to see the basic analysis.</div>
+    then click on the search button to see the basic analysis. <span style={{color: 'cyan', fontSize:'12pt'}}>* = in this context</span></div>
   </>
 );
 
