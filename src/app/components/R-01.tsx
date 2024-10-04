@@ -80,11 +80,12 @@ export default function LTComponent({ onLanguageChange }: LTComponentProps) {
               <p className="text-left text-[11px] sm:text-[10px] md:text-[12px] lg:text-[14px] leading-tight sm:leading-normal text-black font-bold">
                 <Classical1 />
                 <hr style={{ border: "none", height: "5px", backgroundColor: "gray" }} />
-                <span style={{ color: 'blue' }}>Socrates:</span>&nbsp;I went down yesterday to the Piraeus with Glaucon, the son of Ariston, to pray to the goddess but also because I wanted to 
+                <span style={{ color: 'blue' }}>Socrates:</span>&nbsp;I went down yesterday to the Piraeus with Glaucon, the son of Ariston, to pray to the goddess 
+                but also because I wanted to 
                 see in what manner they would celebrate the festival, which took place today for the first time. I was delighted with the procession of the
                 locals, but that of the Thracians was equally, if not more, beautiful. Once we had finished our prayers and
-                viewed the spectacle, we turned in the direction of the city. At that instant Polemarchus the son of Cephalus, happened to catch sight of us from a distance as we were starting on
-                our way home, and told his servant to run and ask us to wait for him.
+                viewed the spectacle, we turned in the direction of the city. Having seen us from afar as we were heading home, Polemarchus, the son of Cephalus, 
+                ordered the boy, who had run ahead, to wait for us.
               </p>
             )}
             {bubbleLanguage === 'da' && (
